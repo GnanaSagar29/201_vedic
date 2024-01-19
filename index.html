@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Form</title>
+<style>
+    body {
+  font-family: sans-serif;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form id="registrationForm">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" required>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" required>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent form submission
+
+  // Get form data
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  // ... other fields
+
+  // Perform validation and handle form submission (e.g., send data to a server)
+  console.log("Form submitted:", firstName, lastName);
+});
+  </script>
+</body>
+</html>
